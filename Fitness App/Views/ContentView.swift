@@ -12,7 +12,7 @@ struct ContentView: View {
     @FetchRequest(sortDescriptors: []) var workouts: FetchedResults<Workout>
     
     @State private var showingAddScreen = false
-    
+    // Anything
     var body: some View {
         NavigationView {
             List {
