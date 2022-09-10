@@ -21,7 +21,7 @@ struct WorkoutDetailView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(height: 300)
-
+                
                 Text(workout.type?.uppercased() ?? "BICEPS")
                     .font(.caption)
                     .fontWeight(.black)
@@ -34,7 +34,7 @@ struct WorkoutDetailView: View {
             Text(workout.name ?? "Unknown workout")
                 .font(.title)
                 .foregroundColor(.secondary)
-
+            
             VStack{
                 Text("Weight: \(workout.weight)")
                     .padding()
@@ -44,7 +44,7 @@ struct WorkoutDetailView: View {
                     .padding()
             }
             
-
+            
         }
         .navigationTitle(workout.type ?? "Unknown Workout Type")
         .navigationBarTitleDisplayMode(.inline)
@@ -65,9 +65,12 @@ struct WorkoutDetailView: View {
     
     func deleteWorkout() {
         moc.delete(workout)
-
-        // uncomment this line if you want to make the deletion permanent
-        try? moc.save()
+        
+        do {
+            try moc.save()
+        } catch { // A `catch` block implicitly has a value called `error` which you can reference (like below) to see the failure
+            print(error.localizedDescription)
+        }
         dismiss()
     }
 }

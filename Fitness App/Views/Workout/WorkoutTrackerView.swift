@@ -29,25 +29,25 @@ struct WorkoutTrackerView: View {
                                         .font(.headline)
                                     Text(workout.name ?? "Unknown Workout Name")
                                         .foregroundColor(.secondary)
+                                }
                             }
                         }
                     }
+                    .onDelete(perform: deleteWorkouts)
                 }
-                .onDelete(perform: deleteWorkouts)
-            }
                 .listStyle(.plain)
-        }
-        .navigationTitle("Workout Tracker")
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                EditButton()
             }
-            
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
-                    showingAddScreen.toggle()
-                } label: {
-                    Label("Add Workout", systemImage: "plus")
+            .navigationTitle("Workout Tracker")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        showingAddScreen.toggle()
+                    } label: {
+                        Label("Add Workout", systemImage: "plus")
                     }
                 }
             }
@@ -58,12 +58,14 @@ struct WorkoutTrackerView: View {
     }
     
     func deleteWorkouts(at offsets: IndexSet) {
-        for offset in offsets {
-            let workout = workouts[offset]
+        for workout in workouts {
             moc.delete(workout)
         }
-        
-        try? moc.save()
+        do {
+            try moc.save()
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }
 

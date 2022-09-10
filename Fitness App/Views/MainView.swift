@@ -10,30 +10,30 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         TabView {
-                HomePageView()
-                    .tabItem {
-                        Image(systemName: "house.circle.fill")
-                        Text("Home")
+            HomePageView()
+                .tabItem {
+                    Image(systemName: "house.circle.fill")
+                    Text("Home")
                 }
-                WorkoutTrackerView()
-                    .tabItem {
-                        Image(systemName: "figure.walk.circle.fill")
-                        Text("Workouts")
+            WorkoutTrackerView()
+                .tabItem {
+                    Image(systemName: "figure.walk.circle.fill")
+                    Text("Workouts")
                 }
-                CalorieTrackerView()
-                    .tabItem {
-                        Image(systemName: "heart.circle.fill")
-                        Text("Calories")
+            CalorieTrackerView()
+                .tabItem {
+                    Image(systemName: "heart.circle.fill")
+                    Text("Calories")
                 }
-                ProfileView()
+            ProfileView()
                 .tabItem {
                     Image(systemName: "person.circle.fill")
                     Text("Profile")
                 }
-            }
         }
     }
-    
+}
+
 
 struct FitnessHomePage_Previews: PreviewProvider {
     static var previews: some View {

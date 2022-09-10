@@ -12,7 +12,7 @@ struct CalorieTrackerView: View {
     @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)]) var food: FetchedResults<Food>
     
     @State private var showingAddView = false
-    
+    let date = Date()
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
@@ -75,7 +75,7 @@ struct CalorieTrackerView: View {
                 caloriesToday += item.calories
             }
         }
-         return caloriesToday
+        return caloriesToday
     }
 }
 

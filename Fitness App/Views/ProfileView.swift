@@ -14,12 +14,12 @@ struct ProfileView: View {
                 
                 // Edit Profile
                 
-                    // Name
-                    // Photo
+                // Name
+                // Photo
                 
                 // Security Settings
-                    // Email
-                    // Password
+                // Email
+                // Password
                 
                 // Delete account or logout
                 

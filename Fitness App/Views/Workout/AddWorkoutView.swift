@@ -30,7 +30,7 @@ struct AddWorkoutView: View {
                     }
                     TextField("Name of Workout", text: $name)
                 }
-
+                
                 Section(header: Text("Details")) {
                     Picker("Weight", selection: $weight) {
                         ForEach(0..<51) {
@@ -56,7 +56,7 @@ struct AddWorkoutView: View {
                         newWorkout.name = name
                         newWorkout.reps = Int16(reps)
                         newWorkout.sets = Int16(sets)
-
+                        
                         try? moc.save()
                         dismiss()
                     }
