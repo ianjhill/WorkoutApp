@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  WorkoutTrackerView.swift
 //  Fitness App
 //
 //  Created by Ian Hill on 8/31/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct WorkoutTrackerView: View {
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: []) var workouts: FetchedResults<Workout>
     
@@ -50,6 +50,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        WorkoutTrackerView()
     }
 }
