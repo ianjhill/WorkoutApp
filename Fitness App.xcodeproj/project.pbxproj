@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB08E20B28CD01FD00776B84 /* TimeFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB08E20A28CD01FD00776B84 /* TimeFormat.swift */; };
 		EB75A1FE28C923630089B0B3 /* FitnessApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB75A1FC28C923630089B0B3 /* FitnessApp.xcdatamodeld */; };
 		EB75A20028C924DA0089B0B3 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB75A1FF28C924DA0089B0B3 /* DataController.swift */; };
 		EB75A20228C926510089B0B3 /* AddWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB75A20128C926510089B0B3 /* AddWorkoutView.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB08E20A28CD01FD00776B84 /* TimeFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeFormat.swift; sourceTree = "<group>"; };
 		EB75A1FD28C923630089B0B3 /* FitnessApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FitnessApp.xcdatamodel; sourceTree = "<group>"; };
 		EB75A1FF28C924DA0089B0B3 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		EB75A20128C926510089B0B3 /* AddWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			children = (
 				EB7D8FE128BFCA8E00C9D9AE /* Views */,
 				EB7D8FD328BFCA6C00C9D9AE /* Fitness_AppApp.swift */,
+				EB08E20A28CD01FD00776B84 /* TimeFormat.swift */,
 				EB75A1FF28C924DA0089B0B3 /* DataController.swift */,
 				EB75A1FC28C923630089B0B3 /* FitnessApp.xcdatamodeld */,
 				EB7D8FD728BFCA6E00C9D9AE /* Assets.xcassets */,
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB08E20B28CD01FD00776B84 /* TimeFormat.swift in Sources */,
 				EB75A1FE28C923630089B0B3 /* FitnessApp.xcdatamodeld in Sources */,
 				EB75A20028C924DA0089B0B3 /* DataController.swift in Sources */,
 				EB7D8FD628BFCA6C00C9D9AE /* WorkoutTrackerView.swift in Sources */,
