@@ -17,11 +17,11 @@
 		EB08E21928CD033C00776B84 /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB08E21828CD033C00776B84 /* WorkoutDetailView.swift */; };
 		EB08E22228CD03D900776B84 /* FitnessApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB08E22028CD03D900776B84 /* FitnessApp.xcdatamodeld */; };
 		EB08E22428CD040E00776B84 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB08E22328CD040E00776B84 /* DataController.swift */; };
+		EB08E22A28CD052B00776B84 /* CalorieTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB08E22928CD052B00776B84 /* CalorieTrackerView.swift */; };
 		EB75A20228C926510089B0B3 /* AddWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB75A20128C926510089B0B3 /* AddWorkoutView.swift */; };
 		EB7D8FD428BFCA6C00C9D9AE /* Fitness_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7D8FD328BFCA6C00C9D9AE /* Fitness_AppApp.swift */; };
 		EB7D8FD828BFCA6E00C9D9AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB7D8FD728BFCA6E00C9D9AE /* Assets.xcassets */; };
 		EB7D8FDB28BFCA6E00C9D9AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB7D8FDA28BFCA6E00C9D9AE /* Preview Assets.xcassets */; };
-		EB7D8FE528BFCAC100C9D9AE /* CalorieTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7D8FE428BFCAC100C9D9AE /* CalorieTrackerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,12 +35,12 @@
 		EB08E21828CD033C00776B84 /* WorkoutDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
 		EB08E22128CD03D900776B84 /* FitnessApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FitnessApp.xcdatamodel; sourceTree = "<group>"; };
 		EB08E22328CD040E00776B84 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		EB08E22928CD052B00776B84 /* CalorieTrackerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalorieTrackerView.swift; sourceTree = "<group>"; };
 		EB75A20128C926510089B0B3 /* AddWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutView.swift; sourceTree = "<group>"; };
 		EB7D8FD028BFCA6C00C9D9AE /* Fitness App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fitness App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB7D8FD328BFCA6C00C9D9AE /* Fitness_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fitness_AppApp.swift; sourceTree = "<group>"; };
 		EB7D8FD728BFCA6E00C9D9AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB7D8FDA28BFCA6E00C9D9AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		EB7D8FE428BFCAC100C9D9AE /* CalorieTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieTrackerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,7 @@
 		EB08E21B28CD036B00776B84 /* Calorie */ = {
 			isa = PBXGroup;
 			children = (
-				EB7D8FE428BFCAC100C9D9AE /* CalorieTrackerView.swift */,
+				EB08E22928CD052B00776B84 /* CalorieTrackerView.swift */,
 				EB08E21028CD030A00776B84 /* EditFood.swift */,
 				EB08E20C28CD026700776B84 /* AddFood.swift */,
 			);
@@ -200,8 +200,8 @@
 				EB08E21728CD033300776B84 /* ProfileView.swift in Sources */,
 				EB08E21328CD031D00776B84 /* HomePageView.swift in Sources */,
 				EB08E21128CD030A00776B84 /* EditFood.swift in Sources */,
-				EB7D8FE528BFCAC100C9D9AE /* CalorieTrackerView.swift in Sources */,
 				EB08E21528CD032300776B84 /* MainView.swift in Sources */,
+				EB08E22A28CD052B00776B84 /* CalorieTrackerView.swift in Sources */,
 				EB08E22228CD03D900776B84 /* FitnessApp.xcdatamodeld in Sources */,
 				EB75A20228C926510089B0B3 /* AddWorkoutView.swift in Sources */,
 				EB7D8FD428BFCA6C00C9D9AE /* Fitness_AppApp.swift in Sources */,
