@@ -26,14 +26,6 @@ struct ContentView: View {
                                     .font(.headline)
                                 Text(workout.name ?? "Unknown Workout Name")
                                     .foregroundColor(.secondary)
-                            VStack {
-                                //Text(workout.weight) ?? 0)
-                                    //.font(.headline)
-                            }
-                                
-                            VStack {
-                                //Text(workout.sets ?? 0)
-                                //Text(workout.reps ?? 0)
                             }
                         }
                     }
@@ -47,12 +39,11 @@ struct ContentView: View {
                     showingAddScreen.toggle()
                 } label: {
                     Label("Add Workout", systemImage: "plus")
-                    }
                 }
             }
-            .sheet(isPresented: $showingAddScreen) {
-                AddWorkoutView()
-            }
+        }
+        .sheet(isPresented: $showingAddScreen) {
+            AddWorkoutView()
         }
     }
 }
