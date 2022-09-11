@@ -31,7 +31,7 @@ struct CalorieTrackerView: View {
                                         .foregroundColor(.red)
                                 }
                                 Spacer()
-                                Text(calcTimeSince(date: food.date!))
+                                Text(food.date!.calcTimeSince())
                                     .foregroundColor(.gray)
                                     .italic()
                             }
