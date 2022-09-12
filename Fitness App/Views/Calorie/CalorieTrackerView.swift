@@ -12,34 +12,35 @@ struct CalorieTrackerView: View {
     @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)]) var food: FetchedResults<Food>
     
     @State private var showingAddView = false
-    let date = Date()
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
                 Text("\(Int(totalCaloriesToday())) Kcal today")
                     .foregroundColor(.gray)
                     .padding(.horizontal)
-                List {
-                    ForEach(food) { food in
-                        NavigationLink(destination: EditFood(food: food)) {
-                            HStack {
-                                VStack(alignment: .leading, spacing: 6) {
-                                    Text(food.name!)
-                                        .bold()
-                                    
-                                    Text("\(Int(food.calories))") + Text(" calories")
-                                        .foregroundColor(.red)
+                //ScrollView {
+                    List {
+                        ForEach(food) { food in
+                            NavigationLink(destination: EditFood(food: food)) {
+                                HStack {
+                                    VStack(alignment: .leading, spacing: 6) {
+                                        Text(food.name!)
+                                            .bold()
+                                        
+                                        Text("\(Int(food.calories))") + Text(" calories")
+                                            .foregroundColor(.red)
+                                    }
+                                    Spacer()
+                                    Text(food.date!.calcTimeSince())
+                                        .foregroundColor(.gray)
+                                        .italic()
                                 }
-                                Spacer()
-                                Text(food.date!.calcTimeSince())
-                                    .foregroundColor(.gray)
-                                    .italic()
                             }
                         }
+                        .onDelete(perform: deleteFood)
                     }
-                    .onDelete(perform: deleteFood)
-                }
-                .listStyle(.plain)
+                    .listStyle(.plain)
+                //}
             }
             .navigationTitle("Calorie Tracker")
             .toolbar {
