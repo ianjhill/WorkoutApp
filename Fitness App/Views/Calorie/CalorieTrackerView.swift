@@ -11,13 +11,31 @@ struct CalorieTrackerView: View {
     @Environment(\.managedObjectContext) var managedObjContext
     @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)]) var food: FetchedResults<Food>
     
+    @State private var caloricGoal: Double = 500
+    
     @State private var showingAddView = false
+    
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
-                Text("\(Int(totalCaloriesToday())) Kcal today")
-                    .foregroundColor(.gray)
+                Text("Daily Caloric Goal: \(Int(caloricGoal))")
+                    .padding()
+                Slider(value: $caloricGoal, in: 500...4000, step: 10)
                     .padding(.horizontal)
+                Spacer()
+                Text("\(Int(totalCaloriesToday())) Kcal eaten today")
+                    .foregroundColor(.gray)
+                    .padding()
+                
+                if dailyCaloriesLeft() > 0 {
+                    Text("\(Int(dailyCaloriesLeft())) calories needed to reach daily goal")
+                        .foregroundColor(.red)
+                        .padding(.horizontal)
+                } else {
+                    Text("Congratulations, you have reached your daily caloric intake")
+                        .foregroundColor(.green)
+                        .padding(.horizontal)
+                }
                 
                 List {
                     ForEach(food) { food in
@@ -78,6 +96,12 @@ struct CalorieTrackerView: View {
             }
         }
         return caloriesToday
+    }
+    
+    private func dailyCaloriesLeft() -> Double {
+        let dailyCaloriesLeft = caloricGoal - totalCaloriesToday()
+        return dailyCaloriesLeft
+        
     }
 }
 

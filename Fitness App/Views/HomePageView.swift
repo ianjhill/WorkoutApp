@@ -10,12 +10,11 @@ import SwiftUI
 struct HomePageView: View {
     @FetchRequest(sortDescriptors: []) var workouts: FetchedResults<Workout>
     @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)]) var food: FetchedResults<Food>
-    
+
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
-                Text("Last 3 workouts done.")
-                    .foregroundColor(.black)
+                Text("Last 3 workouts completed")
                     .padding(.horizontal)
                 List {
                     ForEach(workouts.suffix(3)) { workout in
@@ -30,7 +29,6 @@ struct HomePageView: View {
                 .listStyle(.plain)
                 
                 Text("Last 3 foods eaten")
-                    .foregroundColor(.black)
                     .padding(.horizontal)
                 List {
                     ForEach(food.suffix(3)) { food in
