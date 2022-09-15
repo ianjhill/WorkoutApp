@@ -18,37 +18,33 @@ struct HomePageView: View {
                     .foregroundColor(.black)
                     .padding(.horizontal)
                 List {
-                    ForEach(workouts.indices) { index in
-                        if index < 3 {
-                            HStack {
-                                    VStack(alignment: .leading, spacing: 6) {
-                                        Text(workouts[index].type ?? "Unknown Workout Type")
-                                            .font(.headline)
-                                        Text(workouts[index].name ?? "Unknown Workout Name")
-                                            .foregroundColor(.secondary)
-                                    }
-                                }
-                            }
+                    ForEach(workouts.suffix(3)) { workout in
+                        VStack(alignment: .leading, spacing: 6) { // Line Spacing of 6 between Listed workout type & name
+                            Text(workout.type ?? "Unknown Workout Type")
+                                .font(.headline)
+                            Text(workout.name ?? "Unknown Workout Name")
+                                .foregroundColor(.secondary)
                         }
                     }
-                    .listStyle(.plain)
-            
+                }
+                .listStyle(.plain)
+                
                 Text("Last 3 foods eaten")
                     .foregroundColor(.black)
                     .padding(.horizontal)
                 List {
-                    ForEach(food.indices) { index in
-                        if index < 3 {
-                            HStack {
-                                VStack(alignment: .leading, spacing: 6) {
-                                    Text(food[index].name!)
-                                        .bold()
-                                    
-                                    Text("\(Int(food[index].calories))") + Text(" calories")
-                                        .foregroundColor(.red)
-                                }
-                                Spacer()
-                                Text(food[index].date!.calcTimeSince())
+                    ForEach(food.suffix(3)) { food in
+                        HStack {
+                            VStack(alignment: .leading, spacing: 6) { // Line Spacing of 6 between Listed food name & calories
+                                Text(food.name!)
+                                    .bold()
+                                
+                                Text("\(Int(food.calories))") + Text(" calories")
+                                    .foregroundColor(.red)
+                            }
+                            Spacer()
+                            if let foodDate = food.date {
+                                Text(foodDate.calcTimeSince())
                                     .foregroundColor(.gray)
                                     .italic()
                             }

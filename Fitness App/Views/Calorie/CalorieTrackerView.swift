@@ -18,29 +18,30 @@ struct CalorieTrackerView: View {
                 Text("\(Int(totalCaloriesToday())) Kcal today")
                     .foregroundColor(.gray)
                     .padding(.horizontal)
-                //ScrollView {
-                    List {
-                        ForEach(food) { food in
-                            NavigationLink(destination: EditFood(food: food)) {
-                                HStack {
-                                    VStack(alignment: .leading, spacing: 6) {
-                                        Text(food.name!)
-                                            .bold()
-                                        
-                                        Text("\(Int(food.calories))") + Text(" calories")
-                                            .foregroundColor(.red)
-                                    }
-                                    Spacer()
-                                    Text(food.date!.calcTimeSince())
+                
+                List {
+                    ForEach(food) { food in
+                        NavigationLink(destination: EditFood(food: food)) {
+                            HStack {
+                                VStack(alignment: .leading, spacing: 6) {
+                                    Text(food.name!)
+                                        .bold()
+                                    
+                                    Text("\(Int(food.calories))") + Text(" calories")
+                                        .foregroundColor(.red)
+                                }
+                                Spacer()
+                                if let foodDate = food.date {
+                                    Text(foodDate.calcTimeSince())
                                         .foregroundColor(.gray)
                                         .italic()
                                 }
                             }
                         }
-                        .onDelete(perform: deleteFood)
                     }
-                    .listStyle(.plain)
-                //}
+                    .onDelete(perform: deleteFood)
+                }
+                .listStyle(.plain)
             }
             .navigationTitle("Calorie Tracker")
             .toolbar {
