@@ -15,6 +15,7 @@ struct Fitness_AppApp: App {
         WindowGroup {
             MainView()
                 .environment(\.managedObjectContext, dataController.container.viewContext)
+                .preferredColorScheme(.dark)
         }
     }
 }

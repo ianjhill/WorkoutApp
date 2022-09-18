@@ -8,21 +8,14 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @State private var firstName = ""
+    @State private var lastName = ""
+    
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading) {
-                
-                // Edit Profile
-                
-                // Name
-                // Photo
-                
-                // Security Settings
-                // Email
-                // Password
-                
-                // Delete account or logout
-                
+            Form {
+                TextField("First Name", text: $firstName)
+                TextField("Last Name", text: $lastName)
             }
             .navigationTitle("Profile")
         }
