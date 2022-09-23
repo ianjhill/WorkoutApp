@@ -18,6 +18,8 @@
 		EB08E22428CD040E00776B84 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB08E22328CD040E00776B84 /* DataController.swift */; };
 		EB08E22A28CD052B00776B84 /* CalorieTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB08E22928CD052B00776B84 /* CalorieTrackerView.swift */; };
 		EB08E22C28CD06D900776B84 /* WorkoutTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB08E22B28CD06D900776B84 /* WorkoutTrackerView.swift */; };
+		EB1AA8E228DE087E005524AB /* CalorieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1AA8E128DE087E005524AB /* CalorieListViewModel.swift */; };
+		EB1AA8E428DE08A9005524AB /* CalorieCountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1AA8E328DE08A9005524AB /* CalorieCountViewModel.swift */; };
 		EB75A20228C926510089B0B3 /* AddWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB75A20128C926510089B0B3 /* AddWorkoutView.swift */; };
 		EB7D8FD428BFCA6C00C9D9AE /* Fitness_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7D8FD328BFCA6C00C9D9AE /* Fitness_AppApp.swift */; };
 		EB7D8FD828BFCA6E00C9D9AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB7D8FD728BFCA6E00C9D9AE /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 		EB08E22328CD040E00776B84 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		EB08E22928CD052B00776B84 /* CalorieTrackerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalorieTrackerView.swift; sourceTree = "<group>"; };
 		EB08E22B28CD06D900776B84 /* WorkoutTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTrackerView.swift; sourceTree = "<group>"; };
+		EB1AA8E128DE087E005524AB /* CalorieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieListViewModel.swift; sourceTree = "<group>"; };
+		EB1AA8E328DE08A9005524AB /* CalorieCountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieCountViewModel.swift; sourceTree = "<group>"; };
 		EB75A20128C926510089B0B3 /* AddWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutView.swift; sourceTree = "<group>"; };
 		EB7D8FD028BFCA6C00C9D9AE /* Fitness App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fitness App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB7D8FD328BFCA6C00C9D9AE /* Fitness_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fitness_AppApp.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				EB08E22928CD052B00776B84 /* CalorieTrackerView.swift */,
+				EB1AA8E328DE08A9005524AB /* CalorieCountViewModel.swift */,
+				EB1AA8E128DE087E005524AB /* CalorieListViewModel.swift */,
 				EB08E21028CD030A00776B84 /* EditFood.swift */,
 				EB08E20C28CD026700776B84 /* AddFood.swift */,
 			);
@@ -194,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB1AA8E228DE087E005524AB /* CalorieListViewModel.swift in Sources */,
 				EB08E20B28CD01FD00776B84 /* TimeFormat.swift in Sources */,
 				EB08E21928CD033C00776B84 /* WorkoutDetailView.swift in Sources */,
 				EB08E20D28CD026700776B84 /* AddFood.swift in Sources */,
@@ -206,6 +213,7 @@
 				EB75A20228C926510089B0B3 /* AddWorkoutView.swift in Sources */,
 				EB7D8FD428BFCA6C00C9D9AE /* Fitness_AppApp.swift in Sources */,
 				EB08E22C28CD06D900776B84 /* WorkoutTrackerView.swift in Sources */,
+				EB1AA8E428DE08A9005524AB /* CalorieCountViewModel.swift in Sources */,
 				EB08E22428CD040E00776B84 /* DataController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
